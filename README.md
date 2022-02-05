@@ -17,7 +17,8 @@ This course is a detailed 60 hour Front End Development course for beginners.
 3. JavaScript
 
 ## Lessons
-- Lesson 1.0
+- Lesson 1.0 - HTML Document Structure
+- Lesson 2.0 - Basic HTML Document Styling
 
 
 ## Author

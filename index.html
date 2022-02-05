@@ -1,6 +1,6 @@
 <!--
     this <!DOCTYPE> tag introduced in HTML5 to give the browser an information
-about hte document type 
+about hte document type
 -->
 <!DOCTYPE html>
 <!--this tagthe container for all other HTML elements (except for the <!DOCTYPE> tag)-->
@@ -11,7 +11,7 @@ about hte document type
 <head>
 <!--
     - Metadata is data about the HTML document. Metadata is not displayed.
-    - Metadata is used by browsers (how to display content or reload page), 
+    - Metadata is used by browsers (how to display content or reload page),
     search engines (keywords), and other web services.
 -->
     <meta charset="UTF-8">
@@ -23,54 +23,109 @@ about hte document type
     setting the title of the document
 -->
     <title>Document</title>
+<!--
+    the style tag is use to apply styles to the HTML elements
+    by using selectors
+-->
+    <style>
+        #id__selector01 {
+            height: 50px;
+            width: 100px;
+            border: 2px solid #000;
+            float: right;
+            display: block;
+        }
+
+        #id__selector02 {
+            height: 50px;
+            width: 100px;
+            border: 2px solid #000;
+            float: left;
+        }
+
+        #id__selector03 {
+            height: 50px;
+            width: 100px;
+            border: 2px solid #000;
+            /* float: left; */
+            clear: both;
+        }
+
+        .ele__pos__container {
+
+            border: 1px solid #000;
+            background: turquoise;
+            padding: 15px;
+
+        }
+
+        .ele__pos01{
+
+            background: blueviolet;
+            border: 1px solid #000;
+            margin: 0px;
+            /* position: absolute;
+            top: 0px; */
+        }
+
+        .ele__pos02{
+            background: rgb(179, 177, 78);
+            border: 1px solid #000;
+            margin: 0px;
+            /* position: fixed;
+            top: 100px; */
+        }
+
+        .ele__pos03{
+            background: rgb(56, 154, 161);
+            border: 1px solid #000;
+            margin: 0px;
+            /* position: relative;
+            top: 10px;
+            left: -10px; */
+        }
+    </style>
 </head>
+
+
 <!--
     the body tag is where any visible content placed
 -->
 <body>
 <!--
-    There are three types of HTML tags, 
-    1. text-container tags
-    2. styling tags
-    3. structural tags
+    Basic styling for HTML content
 -->
 <!--
-    1. Text container tags
+    1. The style attribute for text tags
 -->
-    <h1>This is heading 1</h1>
-    <h2>This is heading 2</h2>
-    <h3>This is heading 3</h3>
-    <h4>This is heading 4</h4>
-    <h5>This is heading 5</h5>
-    <h6>This is heading 6</h6>
-    <br>
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
-    <pre>
-    My Bonnie lies over the ocean.
-  
-    My Bonnie lies over the sea.
-  
-    My Bonnie lies over the ocean.
-   
-    Oh, bring back my Bonnie to me.
-  </pre>
+    <h2 style="text-align: center;">This is heading 2</h2>
+    <h2 style="display: none;">This is heading 2</h2>
+    <h2 style="border: 1px solid red;">This is heading 2 with border</h2>
+    <h2 style="border: 1px solid red; display: inline">This is heading 2 with inline display</h2>
+    <h2 style="background: lightcoral;border: 1px solid red; display: inline">This is another heading 2 with inline display</h2>
+    <h2 style="border: 1px solid red;">This is heading 2 with display block</h2>
 <!--
-    2. styling tags
+    2. The style tag
 -->
-    <p>This text is normal.</p>
-    <p><strong>This text is bold.</strong></p>
-    <p><em>This text is emphasized.</em></p>
-    <p><i>This text is italic.</i></p>
-    <p><mark>This text is highlighted.</mark></p>
+    <div id="id__selector01">
+        <p>box01</p>
+    </div>
+    <div id="id__selector02">
+        <p>box02</p>
+    </div>
+    <div id="id__selector03">
+        <p>box03</p>
+    </div>
 <!--
-    3. structural tags
+    3. The position Property
 -->
-    <div></div>
-    <section></section>
-    <article></article>
-    <header></header>
-    <footer></footer>
-    <aside></aside>
+    <div class="ele__pos__container">
+        Container
+        <div class="ele__pos01">Testing the element position </div>
+        <div class="ele__pos02">Testing the element position </div>
+        <div class="ele__pos03">Testing the element position </div>
+    </div>
+
+
 </body>
 </html>
