@@ -27,6 +27,8 @@ about hte document type
     the style tag is use to apply styles to the HTML elements
     by using selectors
 -->
+<!-- ____________________use fontawesome___________________-->
+<script src="https://kit.fontawesome.com/5a09028bd4.js" crossorigin="anonymous"></script>
         <!--Styling a real-life website-->
     <style>
         * {
@@ -63,6 +65,7 @@ about hte document type
         #logo {
             display: inline-block;
             background: none;
+            
         }
         #hd ul li {
             display: inline;
@@ -84,8 +87,12 @@ about hte document type
 
 
         #logo img{
-            width: 10vw;
-            height: 10vh;
+            width: 200px;
+            height: 150px;
+            padding: 0px;
+            margin: 0px;
+            position: absolute;
+            top: -25px;
         }
 
         #sd {
@@ -97,15 +104,15 @@ about hte document type
         }
 
         .personal__photo {
-            height: 17vh;
-            width: 14vw;
+            height: 250px;
+            width: 220px;
             border: 1px solid #000;
             position: relative;
             top: 10vh;
             left: 10vw;
             background-image: url("images/me2020.jpg");
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: cover
 
         }
 
@@ -127,16 +134,16 @@ about hte document type
 
         .main__section {
             width: calc(100vw/3*2);
-            height: 60vh;
+            height: 40vh;
             position: absolute;
             top: 10vh;
             left: 33vw;
         }
 
         .sec {
-            border: 1px solid rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             width: calc(100vw/3*2 - 05em);
-            height: calc(60vh/3 + 1em);
+            height: calc(50vh/3 + 1em);
 
             background: #fff;
             border-radius: 5px;
@@ -144,8 +151,8 @@ about hte document type
             padding: 2vw;
         }
         #icon01 {
-            width: 4vw;
-            height: 5vh;
+            width: 50px;
+            height: 50px;
             background-image: url("images/udacity.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -154,8 +161,8 @@ about hte document type
         }
 
         #icon02 {
-            width: 4vw;
-            height: 5vh;
+            width: 50px;
+            height: 50px;
             background-image: url("images/gads.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -164,8 +171,8 @@ about hte document type
         }
 
         #icon03 {
-            width: 4vw;
-            height: 5vh;
+            width: 50px;
+            height: 50px;
             background-image: url("images/ef-set.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -184,7 +191,28 @@ about hte document type
             padding: 0 0 0 1vw;
         }
 
+        #ft {
+            width: 100vw;
+            height: 10vh;
+            position: relative;
+            top: 90vh;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        #ft p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding-top: 1rem;
+        }
 
+        .social__icons{
+            text-align: center;
+            padding-top: 1.6rem;
+        }
+        .social__icons li{
+            display: inline;
+            margin: 3vh;
+        }
     </style>
 </head>
 
@@ -284,7 +312,19 @@ Adobe cc package(Illustrator, Photoshop, Aftereffects, Animate, Dreamweaver, Mus
         </article>
     </section>
     <footer id="ft">
-
+        
+        <p>All rights reserved&copy;my portfolio</p>
+        <ul class="social__icons">
+            <li class="social__icon">
+                <i class="fa-brands fa-twitter fa-2xl"></i>
+            </li>
+            <li class="social__icon">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+            </li>
+            <li class="social__icon">
+                <i class="fa-solid fa-envelope fa-2xl"></i>
+            </li>
+        </ul>
     </footer>
 </main>
 </body>
