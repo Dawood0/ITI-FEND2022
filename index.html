@@ -27,62 +27,72 @@ about hte document type
     the style tag is use to apply styles to the HTML elements
     by using selectors
 -->
+        <!--CSS selectors Types-->
     <style>
-        #id__selector01 {
-            height: 50px;
-            width: 100px;
-            border: 2px solid #000;
-            float: right;
-            display: block;
+        /*____________1. Univeral Selector _________________*/
+        * {
+            background: violet;
+            padding: 0px;
+            margin: 0px auto;
+            font-size: 30px;
+        }
+        /*____________2. Type Selector _________________*/
+        h1 {
+            color: #fff;
+        }
+        /*____________3. Class Selector _________________*/
+        .class__selector {
+            font-size: 30px;
+        }
+        /*____________4. Id Selector _________________*/
+        #id__selector {
+            font-style: italic;
+        }
+        /*____________5. Attribute Selector _________________*/
+        [href] {
+            color: white;
         }
 
-        #id__selector02 {
-            height: 50px;
-            width: 100px;
-            border: 2px solid #000;
-            float: left;
+        [href="https://example.com"] {
+            color: red;
+        }
+        /*____________6. Grouping Selectors _________________*/
+
+        p,span {
+            /*__________ all p and span____________*/
+            color: blue;
         }
 
-        #id__selector03 {
-            height: 50px;
-            width: 100px;
-            border: 2px solid #000;
-            /* float: left; */
-            clear: both;
+        p span {
+        /*__________ span inside p ____________*/
+            color: chartreuse;
         }
 
-        .ele__pos__container {
-
-            border: 1px solid #000;
-            background: turquoise;
-            padding: 15px;
-
+        div > p {
+        /*__________ p  at the first level____________*/
+            color: red;
         }
 
-        .ele__pos01{
-
-            background: blueviolet;
-            border: 1px solid #000;
-            margin: 0px;
-            /* position: absolute;
-            top: 0px; */
+        div + p {
+            /*__________ p  after div____________*/
+            color: yellow;
         }
 
-        .ele__pos02{
-            background: rgb(179, 177, 78);
-            border: 1px solid #000;
-            margin: 0px;
-            /* position: fixed;
-            top: 100px; */
+        br ~ p {
+            /*__________ p  after div____________*/
+            color: white;
         }
-
-        .ele__pos03{
-            background: rgb(56, 154, 161);
-            border: 1px solid #000;
-            margin: 0px;
-            /* position: relative;
-            top: 10px;
-            left: -10px; */
+        /*____________7. Pseudo classes _________________*/
+        .anchor:hover{
+            /*__________  when hover a link ____________*/
+            font-size: 50px;
+            color: blue;
+        }
+        /*____________7. Pseudo elements _________________*/
+        #pseudo::after {
+            content: "this line is not written in HTML";
+            padding: 5px;
+            color: bisque;
         }
     </style>
 </head>
@@ -93,39 +103,34 @@ about hte document type
 -->
 <body>
 <!--
-    Basic styling for HTML content
+   Test CSS selectors
 -->
-<!--
-    1. The style attribute for text tags
--->
-    <h2 style="text-align: center;">This is heading 2</h2>
-    <h2 style="display: none;">This is heading 2</h2>
-    <h2 style="border: 1px solid red;">This is heading 2 with border</h2>
-    <h2 style="border: 1px solid red; display: inline">This is heading 2 with inline display</h2>
-    <h2 style="background: lightcoral;border: 1px solid red; display: inline">This is another heading 2 with inline display</h2>
-    <h2 style="border: 1px solid red;">This is heading 2 with display block</h2>
-<!--
-    2. The style tag
--->
-    <div id="id__selector01">
-        <p>box01</p>
-    </div>
-    <div id="id__selector02">
-        <p>box02</p>
-    </div>
-    <div id="id__selector03">
-        <p>box03</p>
-    </div>
-<!--
-    3. The position Property
--->
-    <div class="ele__pos__container">
-        Container
-        <div class="ele__pos01">Testing the element position </div>
-        <div class="ele__pos02">Testing the element position </div>
-        <div class="ele__pos03">Testing the element position </div>
-    </div>
+<!--____________2. Type Selector _________________-->
+<h1>Use th type selector to target the element by tag name</h1>
+<!--____________3. Class Selector _________________-->
+<p class="class__selector">use a class name to target the element</p>
+<!--____________4. Id Selector _________________-->
+<p id="id__selector">use an ID to target the element</p>
+<!--____________5. Attribute Selector _________________-->
+<a href="https://example.com">Click the link!</a>
+<a href="https://google.com">Click the link02!</a>
+<!--____________6. Grouping Selectors _________________-->
+<p>select paragraphs and <span>spans</span></p>
+<span>span outside the paragraph</span>
+<div>
+    <p>a first level paragraph</p>
+    <a>
+        <p>a second level paragraph</p>
+    </a>
+    <p>a first level paragraph</p>
+</div>
+<p> a paragraph after a div</p>
+<br>
+<p> a paragraph after a line break</p>
 
-
+<!--____________7. Pseudo classes _________________-->
+<a class="anchor" href="#">Click the link!</a>
+<!--____________8. Pseudo elements _________________-->
+<h3 id="pseudo" >you can add a conten to this element using the pseudo element</h3>
 </body>
 </html>
