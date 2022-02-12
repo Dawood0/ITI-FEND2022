@@ -42,9 +42,12 @@ about hte document type
 
         #hd {
             height: 10vh;
+            width: 100vw;
             background-color: rgb(248, 244, 244);
             /* border-bottom: 1px solid #000; */
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            z-index: 1;
         }
 
         #navbar {
@@ -76,12 +79,50 @@ about hte document type
 
         #hd ul li a:hover {
             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
 
 
         #logo img{
             width: 10vw;
             height: 10vh;
+        }
+
+        #sd {
+            width: calc(100vw/3);
+            height: 80vh;
+            position: absolute;
+            top: 10vh;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .personal__photo {
+            height: 17vh;
+            width: 14vw;
+            border: 1px solid #000;
+            position: relative;
+            top: 10vh;
+            left: 10vw;
+            background-image: url("images/me2020.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        #about__me {
+            width: 30vw;
+            height: auto;
+            position: relative;
+            top: 8vh;
+            text-align: center;
+            margin: 6vw 1vh 0 2vw;
+        }
+
+        .about__me__text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+            line-height: 1.8em;
+            margin-top: 2vh;
         }
     </style>
 </head>
@@ -119,7 +160,17 @@ about hte document type
         </div>
     </header>
     <aside id="sd">
-
+        <div class="personal__photo">
+        </div>
+        <div id="about__me">
+            <h2>Mohammad Allam</h2>
+            <p class="about__me__text">
+                I am a Front-End Developer, UX Designer, Motion/Graphic Designer, and Online Educator. 
+My skills include:
+Programming package ( HTML5, CSS3, JavaScript, ES6, JQuery, AJAX, AngularJS, ReactJS, MVC, Wordpress, VCS, Git, ARIA, Jasmine).
+Adobe cc package(Illustrator, Photoshop, Aftereffects, Animate, Dreamweaver, Muse, Audition, Premiere, Bridge, Media Encoder ).
+            </p>
+        </div>
     </aside>
     <section class="main__section">
 
