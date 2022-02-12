@@ -32,7 +32,7 @@ about hte document type
         * {
             padding: 0px;
             margin: 0px;
-            background-color: rgb(248, 243, 236);
+
         }
 
         #main {
@@ -115,7 +115,7 @@ about hte document type
             position: relative;
             top: 8vh;
             text-align: center;
-            margin: 6vw 1vh 0 2vw;
+            padding: 6vw 1vh 0 2vw;
         }
 
         .about__me__text {
@@ -124,6 +124,67 @@ about hte document type
             line-height: 1.8em;
             margin-top: 2vh;
         }
+
+        .main__section {
+            width: calc(100vw/3*2);
+            height: 60vh;
+            position: absolute;
+            top: 10vh;
+            left: 33vw;
+        }
+
+        .sec {
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            width: calc(100vw/3*2 - 05em);
+            height: calc(60vh/3 + 1em);
+
+            background: #fff;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2vw;
+        }
+        #icon01 {
+            width: 4vw;
+            height: 5vh;
+            background-image: url("images/udacity.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 1vh 0vw 0vh 1vh;
+            display: inline-block;
+        }
+
+        #icon02 {
+            width: 4vw;
+            height: 5vh;
+            background-image: url("images/gads.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 1vh 0vw 0vh 1vh;
+            display: inline-block;
+        }
+
+        #icon03 {
+            width: 4vw;
+            height: 5vh;
+            background-image: url("images/ef-set.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 1vh 0vw 0vh 1vh;
+            display: inline-block;
+        }
+
+        .name {
+            display: inline-block;
+            height: 5vh;
+            position: relative;
+            top: -3vh;
+        }
+
+        .role {
+            padding: 0 0 0 1vw;
+        }
+
+
     </style>
 </head>
 
@@ -173,7 +234,54 @@ Adobe cc package(Illustrator, Photoshop, Aftereffects, Animate, Dreamweaver, Mus
         </div>
     </aside>
     <section class="main__section">
+        <article class="sec 01">
+            <h3 class="sec__title">Experience</h3>
+            <div class="info">
+                <div class="section__head">
+                    <div id="icon01">
+                    </div>
+                    <h4 class="name">Udacity</h4>
+                </div>
+                <div class="role">
+                    <h4 class="role__title">Mentor</h4>
+                    <p class="role__date">Mar 2019 - Present · 3 yrs</p>
+                    <p class="role__location">Remote</p>
+                </div>
+            </div>
+        </article>
+        <article class="sec 02">
+            <h3 class="sec__title">Education</h3>
+            <div class="info">
+                <div class="section__head">
+                    <div id="icon02">
+                    </div>
+                    <h4 class="name">
+                        Google Africa Developer Scholarship </h4>
+                </div>
+                <div class="role">
+                    <h4 class="role__title">Student</h4>
+                    <p class="role__date">2020 - 2021</p>
+                    <p class="role__location">Remote</p>
+                </div>
+            </div>
+        </article>
+        <article class="sec 03">
+            <h3 class="sec__title">Licenses & certifications</h3>
+            <div class="info">
+                <div class="section__head">
+                    <div id="icon03">
+                    </div>
+                    <h4 class="name">
+                        EF SET English Certificate 71/100 (C2 Proficient)</h4>
+                </div>
+                <div class="role">
+                    <h4 class="role__title">EF SET English</h4>
+                    <p class="role__date">Issued Oct 2019</p>
+                    <p class="role__location">Remote</p>
+                </div>
+            </div>
 
+        </article>
     </section>
     <footer id="ft">
 
