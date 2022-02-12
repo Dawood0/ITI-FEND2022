@@ -27,129 +27,9 @@ about hte document type
     the style tag is use to apply styles to the HTML elements
     by using selectors
 -->
-        <!--page layout01-->
-    <!-- <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            height: 1000px;
-        }
+        <!--Styling a real-life website-->
+        <style>
 
-        .section__header {
-            width: 100%;
-            height: 200px;
-            background: blueviolet;
-            padding: 0px;
-        }
-
-        .section__main {
-            /* width: 69%; */
-            width: calc((100%/3)*2);
-            height: 600px;
-            background: yellow;
-        }
-
-        .section__side {
-            /* width: 30%; */
-            width: calc((100%/3)*1);
-            height: 600px;
-            background: yellowgreen;
-            float: right;
-            position: relative;
-            top: -600px;
-
-        }
-
-        .section__footer {
-            clear: both;
-            width: 100%;
-            height: 200px;
-            background: brown;
-            padding: 0px;
-            position: absolute;
-            top: 800px
-        }
-
-    </style> -->
-    <!--page layout02 using CSS fixed units -->
-    <!-- <style>
-        * {
-            width: 1000px;
-            height: 1000px;
-        }
-        header {
-            width: 1000px;
-            height: 200px;
-            background: violet;
-        }
-
-        main {
-            width: 700px;
-            height: 600px;
-            background:yellow;
-        }
-
-        aside {
-            width: 300px;
-            height: 600px;
-            background:wheat;
-            float: right;
-            position: relative;
-            top: -600px;
-
-            /* opacity: 0.8; */
-        }
-
-        footer {
-            width: 1000px;
-            height: 200px;
-            background: violet;
-        }
-    </style> -->
-        <!--page layout03 using CSS dynamic units-->
-    <style>
-        html {
-            font-size: 30px;
-        }
-        * {
-            width: 100vw;
-
-        }
-        header {
-            width: 100vw;
-            height: 20vh;
-            background: violet;
-            font-size: 0.8rem;
-        }
-
-        main {
-            /* width: 67vw; */
-            width: calc(100vw/3*2);
-            height: 60vh;
-            background:yellow;
-            float: left;
-        }
-
-        aside {
-            /* width: 29vw; */
-            width: calc(100vw/3);
-            height: 60vh;
-            background:wheat;
-            float: right;
-        }
-
-        footer {
-            width: 100vw;
-            height: 20vh;
-            background: violet;
-            clear: both;
-            font-size: 0.8em;
-        }
-
-        footer p{
-            font-size: 0.5em;
-        }
-   
         </style>
 </head>
 
@@ -159,26 +39,21 @@ about hte document type
 -->
 <body>
 <!--
-   Semantic tags and page layout
+   Real Life website
 -->
-<!-- HTML4-->
-<!-- <div class="section__header"></div>
-<div class="section__main"></div>
-<div class="section__side"></div>
-<div class="section__footer"></div> -->
+<main id="main">
+    <header id="hd">
 
-<header>
-<p>Header Area</p>
-</header>
-<main>
-<p>Main Area</p>
+    </header>
+    <aside id="sd">
+
+    </aside>
+    <section class="main__section">
+
+    </section>
+    <footer id="ft">
+
+    </footer>
 </main>
-<aside>
-<p>Side Area</p>
-</aside>
-<footer>
-  <p>Footer Area</p>  
-</footer>
-
 </body>
 </html>
