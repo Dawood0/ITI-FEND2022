@@ -27,74 +27,130 @@ about hte document type
     the style tag is use to apply styles to the HTML elements
     by using selectors
 -->
-        <!--CSS selectors Types-->
-    <style>
-        /*____________1. Univeral Selector _________________*/
+        <!--page layout01-->
+    <!-- <style>
         * {
-            background: violet;
             padding: 0px;
-            margin: 0px auto;
+            margin: 0px;
+            height: 1000px;
+        }
+
+        .section__header {
+            width: 100%;
+            height: 200px;
+            background: blueviolet;
+            padding: 0px;
+        }
+
+        .section__main {
+            /* width: 69%; */
+            width: calc((100%/3)*2);
+            height: 600px;
+            background: yellow;
+        }
+
+        .section__side {
+            /* width: 30%; */
+            width: calc((100%/3)*1);
+            height: 600px;
+            background: yellowgreen;
+            float: right;
+            position: relative;
+            top: -600px;
+
+        }
+
+        .section__footer {
+            clear: both;
+            width: 100%;
+            height: 200px;
+            background: brown;
+            padding: 0px;
+            position: absolute;
+            top: 800px
+        }
+
+    </style> -->
+    <!--page layout02 using CSS fixed units -->
+    <!-- <style>
+        * {
+            width: 1000px;
+            height: 1000px;
+        }
+        header {
+            width: 1000px;
+            height: 200px;
+            background: violet;
+        }
+
+        main {
+            width: 700px;
+            height: 600px;
+            background:yellow;
+        }
+
+        aside {
+            width: 300px;
+            height: 600px;
+            background:wheat;
+            float: right;
+            position: relative;
+            top: -600px;
+
+            /* opacity: 0.8; */
+        }
+
+        footer {
+            width: 1000px;
+            height: 200px;
+            background: violet;
+        }
+    </style> -->
+        <!--page layout03 using CSS dynamic units-->
+    <style>
+        html {
             font-size: 30px;
         }
-        /*____________2. Type Selector _________________*/
-        h1 {
-            color: #fff;
+        * {
+            width: 100vw;
+
         }
-        /*____________3. Class Selector _________________*/
-        .class__selector {
-            font-size: 30px;
-        }
-        /*____________4. Id Selector _________________*/
-        #id__selector {
-            font-style: italic;
-        }
-        /*____________5. Attribute Selector _________________*/
-        [href] {
-            color: white;
+        header {
+            width: 100vw;
+            height: 20vh;
+            background: violet;
+            font-size: 0.8rem;
         }
 
-        [href="https://example.com"] {
-            color: red;
-        }
-        /*____________6. Grouping Selectors _________________*/
-
-        p,span {
-            /*__________ all p and span____________*/
-            color: blue;
+        main {
+            /* width: 67vw; */
+            width: calc(100vw/3*2);
+            height: 60vh;
+            background:yellow;
+            float: left;
         }
 
-        p span {
-        /*__________ span inside p ____________*/
-            color: chartreuse;
+        aside {
+            /* width: 29vw; */
+            width: calc(100vw/3);
+            height: 60vh;
+            background:wheat;
+            float: right;
         }
 
-        div > p {
-        /*__________ p  at the first level____________*/
-            color: red;
+        footer {
+            width: 100vw;
+            height: 20vh;
+            background: violet;
+            clear: both;
+            font-size: 0.8em;
         }
 
-        div + p {
-            /*__________ p  after div____________*/
-            color: yellow;
+        footer p{
+            font-size: 0.5em;
         }
-
-        br ~ p {
-            /*__________ p  after div____________*/
-            color: white;
-        }
-        /*____________7. Pseudo classes _________________*/
-        .anchor:hover{
-            /*__________  when hover a link ____________*/
-            font-size: 50px;
-            color: blue;
-        }
-        /*____________7. Pseudo elements _________________*/
-        #pseudo::after {
-            content: "this line is not written in HTML";
-            padding: 5px;
-            color: bisque;
-        }
-    </style>
+   
+        </style>
 </head>
 
 
@@ -103,34 +159,26 @@ about hte document type
 -->
 <body>
 <!--
-   Test CSS selectors
+   Semantic tags and page layout
 -->
-<!--____________2. Type Selector _________________-->
-<h1>Use th type selector to target the element by tag name</h1>
-<!--____________3. Class Selector _________________-->
-<p class="class__selector">use a class name to target the element</p>
-<!--____________4. Id Selector _________________-->
-<p id="id__selector">use an ID to target the element</p>
-<!--____________5. Attribute Selector _________________-->
-<a href="https://example.com">Click the link!</a>
-<a href="https://google.com">Click the link02!</a>
-<!--____________6. Grouping Selectors _________________-->
-<p>select paragraphs and <span>spans</span></p>
-<span>span outside the paragraph</span>
-<div>
-    <p>a first level paragraph</p>
-    <a>
-        <p>a second level paragraph</p>
-    </a>
-    <p>a first level paragraph</p>
-</div>
-<p> a paragraph after a div</p>
-<br>
-<p> a paragraph after a line break</p>
+<!-- HTML4-->
+<!-- <div class="section__header"></div>
+<div class="section__main"></div>
+<div class="section__side"></div>
+<div class="section__footer"></div> -->
 
-<!--____________7. Pseudo classes _________________-->
-<a class="anchor" href="#">Click the link!</a>
-<!--____________8. Pseudo elements _________________-->
-<h3 id="pseudo" >you can add a conten to this element using the pseudo element</h3>
+<header>
+<p>Header Area</p>
+</header>
+<main>
+<p>Main Area</p>
+</main>
+<aside>
+<p>Side Area</p>
+</aside>
+<footer>
+  <p>Footer Area</p>  
+</footer>
+
 </body>
 </html>
